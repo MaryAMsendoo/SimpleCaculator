@@ -1,0 +1,81 @@
+/* calculator.css */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f2f2f2, #d7d7d7); /* Neutral gray gradient for background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    background-color: #000000; /* Dark slate blue for the container */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    width: 350px;
+    padding: 20px;
+    text-align: center;
+}
+
+.calculator h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #ecf0f1; /* Light grayish white for the heading */
+}
+
+#input_value {
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    background-color: #f7f9fa; /* Cool gray for input background */
+    color: #060708; /* Dark slate blue input text */
+    text-align: right;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    color: #ffffff; /* White text for all buttons */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #485d72; /* Steel blue for default buttons */
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #387abd; /* Same hover color for all buttons */
+    transform: scale(1.05);
+}
+
+button:nth-child(1) { /* Clear button */
+    background-color: #538e91; /* Warm gray for clear button */
+}
+
+button:nth-child(2), button:nth-child(3), button:nth-child(4) { /* Operator buttons */
+    background-color: #538e91; /* Soft gray-green for operators */
+}
+
+button:nth-child(16), button:nth-child(17), button:nth-child(18), button:nth-child(19) { /* Function keys */
+    background-color: #485d72; /* Uniform steel blue for special functions */
+}
+
+button:last-child { /* Equal button */
+    background-color: #1abc9c; /* Vibrant teal for "=" */
+    grid-column: span 4;
+    font-size: 20px;
+    padding: 20px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Calculator</title>
+
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main container for the calculator -->
+    <div class="calculator">
+        <h1>Calculator</h1>
+
+        <!-- Display area (readonly input field) -->
+        <input type="text" id="input_value" readonly>
+
+        <!-- Calculator buttons arranged inside this keyboard div -->
+        <div class="keyboard">
+            <!-- First row: Clear, Backspace, Divide, Multiply -->
+            <button onclick="appendClear()">C</button> <!-- Clears the entire input -->
+            <button onclick="backspace()">←</button> <!-- Removes last character -->
+            <button onclick="appendnumber('/')">÷</button> <!-- Division -->
+            <button onclick="appendnumber('*')">×</button> <!-- Multiplication -->
+
+            <!-- Second row: Brackets, Square root, Minus -->
+            <button onclick="appendnumber('(')">(</button>
+            <button onclick="appendnumber(')')">)</button>
+            <button onclick="appendnumber('√')">√</button> <!-- Square root symbol -->
+            <button onclick="appendnumber('-')">−</button> <!-- Subtraction -->
+
+            <!-- Third row: Numbers 7, 8, 9, and Plus -->
+            <button onclick="appendnumber('7')">7</button>
+            <button onclick="appendnumber('8')">8</button>
+            <button onclick="appendnumber('9')">9</button>
+            <button onclick="appendnumber('+')">+</button> <!-- Addition -->
+
+            <!-- Fourth row: Numbers 4, 5, 6 -->
+            <button onclick="appendnumber('4')">4</button>
+            <button onclick="appendnumber('5')">5</button>
+            <button onclick="appendnumber('6')">6</button>
+
+            <!-- Fifth row: Numbers 1, 2, 3 -->
+            <button onclick="appendnumber('1')">1</button>
+            <button onclick="appendnumber('2')">2</button>
+            <button onclick="appendnumber('3')">3</button>
+
+            <!-- Sixth row: Scientific functions and 0 -->
+            <button onclick="appendnumber('sin(')">sin</button> <!-- Sine function -->
+            <button onclick="appendnumber('cos(')">cos</button> <!-- Cosine function -->
+            <button onclick="appendnumber('tan(')">tan</button> <!-- Tangent function -->
+            <button onclick="appendnumber('0')">0</button>
+
+            <!-- Last row: Decimal point and Equals -->
+            <button onclick="appendnumber('.')">.</button> <!-- Decimal point -->
+            <button onclick="calculate()">=</button> <!-- Calculates the expression -->
+        </div>
+    </div>
+
+    <!-- External JavaScript file for logic and calculations -->
+    <script src="script.js"></script>
+</body>
+</html>
